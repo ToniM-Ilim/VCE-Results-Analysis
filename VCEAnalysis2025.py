@@ -153,6 +153,9 @@ else:
     )
     st.plotly_chart(fig_2)  # Ensure placement immediately after its heading
 
+    # 🔹 Fourth Plot: Number of students enrolled
+    st.subheader("Number of VCE studies offered with enrolments")  # Subheading instead of title
+  
  # Create bar plot
     fig_3 = px.bar(
         filtered_df,
@@ -160,7 +163,7 @@ else:
         y="num_vce_studies",
         color="school_loc",  # Group by school location
         barmode="group",  # Groups bars by school
-        title="Number of VCE Studies with Enrolments",
+        title="Number of Studies",
         labels={"school_loc": "Campus Location", "num_vce_students_enrolled": "Number of Students", "year": "Year"}
     )
     st.plotly_chart(fig_3)  # Ensure placement immediately after its heading
