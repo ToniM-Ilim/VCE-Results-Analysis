@@ -1,4 +1,4 @@
 streamlit
-plotly
-pandas  # If you are using pandas
+pandas
+plotly==5.17.0  # Or another recent version
 
