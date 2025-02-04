@@ -14,7 +14,7 @@ except ModuleNotFoundError:
     subprocess.run([sys.executable, "-m", "pip", "install", "plotly"])
 
 st.set_page_config(page_title="Ilim College VCE Results", page_icon=":bar_chart:", layout="wide")
-st.title(" :bar_chart: VCE Study Score Trends")
+st.title(" :information_source: VCE Study Scores by School")
 
 
 @st.cache_data
@@ -102,7 +102,7 @@ if filtered_df.empty:
     st.warning("No data available for the selected schools.")
 else:
     # 🔹 First Plot: Median Study Scores
-    st.title("Study Score Comparisons")  # Main Section Heading
+    st.title("  :bar_chart: Study Score Comparisons")  # Main Section Heading
     st.subheader("Median VCE Study Scores Over Time")  # Subheading for clarity
     
     fig = px.line(
