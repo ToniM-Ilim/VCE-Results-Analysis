@@ -133,7 +133,6 @@ else:
         y="percent_ss_40plus",
         color="school_loc",
         markers=True,
-        title="Percentage of 40+ Study Scores",
         labels={"school_loc": "Campus Location", "percent_ss_40plus": "Percentage %", "year": "Year"}
     )
     st.plotly_chart(fig_1)  # Ensure this is placed immediately after its heading
