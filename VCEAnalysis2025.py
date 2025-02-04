@@ -19,7 +19,7 @@ st.title(" :bar_chart: VCE Study Score Trends")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("/Users/a.mercuri/Documents/VCE_Data_Analysis/VCE_School_Results.csv")  # Load dataset
+    df = pd.read_csv("VCE_School_Results.csv")  # Load dataset
     df["median_vce_ss"] = pd.to_numeric(df["median_vce_ss"], errors="coerce")  # Convert to numeric
     df["year"] = df["year"].astype(int)  # ✅ Ensure year is an integer (removes commas)
     df["percent_ss_40plus"]=pd.to_numeric(df["percent_ss_40plus"], errors = "coerce") # Convert to numericreturn df
