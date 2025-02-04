@@ -3,6 +3,16 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+## alternate debugging #
+import sys
+import subprocess
+
+try:
+    import plotly.express as px
+except ModuleNotFoundError:
+    print("Plotly is missing. Installing now...")
+    subprocess.run([sys.executable, "-m", "pip", "install", "plotly"])
+
 st.set_page_config(page_title="Ilim College VCE Results", page_icon=":bar_chart:", layout="wide")
 st.title(" :bar_chart: VCE Study Score Trends")
 
