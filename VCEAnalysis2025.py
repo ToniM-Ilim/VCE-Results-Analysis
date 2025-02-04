@@ -160,10 +160,10 @@ else:
     fig_3 = px.bar(
         filtered_df,
         x="year",
-        y="num_vce_studies",
+        y="Number of studies",
         color="school_loc",  # Group by school location
         barmode="group",  # Groups bars by school
-        title="Number of Studies",
+        title="Number of VCE Studies",
         labels={"school_loc": "Campus Location", "num_vce_students_enrolled": "Number of Students", "year": "Year"}
     )
     st.plotly_chart(fig_3)  # Ensure placement immediately after its heading
