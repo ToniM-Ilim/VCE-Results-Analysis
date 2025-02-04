@@ -111,7 +111,6 @@ else:
         y="median_vce_ss",
         color="school_loc",
         markers=True,
-        title="Median VCE Study Scores",
         labels={"school_loc": "Campus Location", "median_vce_ss": "Median VCE Score", "year": "Year"}
     )
         # Add a horizontal line at y = 30 (State Mean Score)
@@ -147,7 +146,6 @@ else:
         y="num_vce_students_enrolled",
         color="school_loc",  # Group by school location
         barmode="group",  # Groups bars by school
-        title="Number of Students Enrolled in VCE Units 3 and 4",
         labels={"school_loc": "Campus Location", "num_vce_students_enrolled": "Number of Students", "year": "Year"}
     )
     st.plotly_chart(fig_2)  # Ensure placement immediately after its heading
@@ -162,7 +160,6 @@ else:
         y="num_vce_studies",
         color="school_loc",  # Group by school location
         barmode="group",  # Groups bars by school
-        title="Number of VCE Studies",
         labels={"school_loc": "Campus Location", "num_vce_studies": "Number of Studies", "year": "Year"}
     )
     st.plotly_chart(fig_3)  # Ensure placement immediately after its heading
