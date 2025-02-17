@@ -1,4 +1,4 @@
-import streamlit as st
+simport streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -150,7 +150,21 @@ else:
     )
     st.plotly_chart(fig_2)  # Ensure placement immediately after its heading
 
-    # 🔹 Fourth Plot: Number of students enrolled
+    # 🔹 Fourth Plot: Percentage of students applying for tertiary places
+    st.subheader("Percentage of students applying for tertiary places via VTAC")  # Subheading instead of title
+    
+    # Create bar plot
+    fig_4 = px.bar(
+        filtered_df,
+        x="year",
+        y="percent_vce_studs_apply_tert",
+        color="school_loc",  # Group by school location
+        barmode="group",  # Groups bars by school
+        labels={"school_loc": "Campus Location", "percent_vce_studs_apply_tert": "% of Students", "year": "Year"}
+    )
+    st.plotly_chart(fig_4)  # Ensure placement immediately after its heading
+
+    # 🔹 fifth Plot: Number of VCE Studies offered
     st.subheader("Number of VCE studies offered with enrolments")  # Subheading instead of title
   
  # Create bar plot
